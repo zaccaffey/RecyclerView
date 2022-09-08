@@ -1,6 +1,7 @@
 package com.example.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements ZOnItemClickListe
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter.setClickListener(this);
+
+        //int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
+       // mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
     }
 
     @Override
